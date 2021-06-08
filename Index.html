@@ -12,15 +12,40 @@
 </head>
 
 <body>
-    <div class="container">
-        <!-- Top box -->
-        <!-- Logo & Site Name -->
-        <div class="placeholder">
-            <div class="parallax-window" data-parallax="scroll" data-image-src="img/simple-house-01.jpg">
+    <header class="row tm-welcome-section">
+
+        <h2 class="col-12 text-center tm-section-title">TAIKEN</h2>
+        <p class="col-12 text-center">ストアカから親子イベント引っ張り中</p>
+        <div class="container">
+            <div class="parallax-window" id="wheatherBox" data-parallax="scroll"
+                data-image-src="img/simple-house-01.jpg">
+                <div class="jumbotron">
+                    <div id="today" class="text-primary text-center"></div>
+                    <div id="weather1" class="text-center" style="display:none;">
+                        <div class="weather-info">
+                            <i class="wi" id="icon"></i>
+                            <span id="temp"></span><i class="wi wi-celsius"></i>
+                        </div>
+                        <ul class="list-inline">
+                            <li id="name"> </li>
+                            <li id="desc"></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 5days -->
+                <h3 id="place"></h3>
+                <div id="now">
+                    <div id="weather">
+                    </div>
+                </div>
+                <table id="forecast">
+                </table>
+                <!-- ここまで -->
                 <div class="tm-header">
                     <div class="row tm-header-inner">
                         <div class="col-md-6 col-12">
-                            <img src="img/simple-house-logo.png" alt="Logo" class="tm-site-logo" />
+                            <img src="/Users/ryuto/Downloads/G's/KADAI/6:5 Kadai API 2/linkedin_profile_image.png"
+                                alt="Logo" class="tm-site-logo" />
                             <div class="tm-site-text-box">
                                 <h1 class="tm-site-title">Event</h1>
                                 <h6 class="tm-site-description">Meetup</h6>
@@ -28,9 +53,11 @@
                         </div>
                         <nav class="col-md-6 col-12 tm-nav">
                             <ul class="tm-nav-ul">
-                                <li class="tm-nav-li"><a href="index.html" class="tm-nav-link active">Home</a></li>
+                                <li class="tm-nav-li"><a href="index.html" class="tm-nav-link active">Home</a>
+                                </li>
                                 <li class="tm-nav-li"><a href="about.html" class="tm-nav-link">About</a></li>
-                                <li class="tm-nav-li"><a href="contact.html" class="tm-nav-link">Contact</a></li>
+                                <li class="tm-nav-li"><a href="contact.html" class="tm-nav-link">Contact</a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -38,48 +65,39 @@
             </div>
         </div>
 
- 
-            <header class="row tm-welcome-section">
-                <h2 class="col-12 text-center tm-section-title">TAIKEN Simple</h2>
-                <p class="col-12 text-center">Total 3 HTML pages are included in this template. Header image has a
-                    parallax effect. You can feel free to download, edit and use this TemplateMo layout for your
-                    commercial or non-commercial websites.</p>
-            </header>
-
-            <div class="tm-paging-links">
-                <nav>
-                    <ul>
-                        <li class="tm-paging-item"><a href="#" class="tm-paging-link active">Something</a></li>
-                        <li class="tm-paging-item"><a href="#" class="tm-paging-link">Something</a></li>
-                        <li class="tm-paging-item"><a href="#" class="tm-paging-link">Something</a></li>
-                    </ul>
-                </nav>
-            </div>
-  
-        <!-- Gallery -->
-        <div class="row tm-gallery">
-            <!-- gallery page 1 -->
-            <div id="tm-gallery-page-pizza" class="tm-gallery-page"></div>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-                <figure>
-                    <img src="" alt="Image" class="img-fluid tm-gallery-img" />
-                    <figcaption>
-                        <h4 class="tm-gallery-title">Fusce dictum finibus</h4>
-                        <p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut
-                            sit amet tellus accumsan</p>
-                        <p class="tm-gallery-price">$45 / $55</p>
-                    </figcaption>
-                </figure>
-            </article>
-
-        </div> <!-- gallery page 1 -->
-        
+    </header>
+    <div class="tm-paging-links">
+        <nav>
+            <ul>
+                <li class="tm-paging-item"><a href="#" class="tm-paging-link active">K API１</a></li>
+                <li class="tm-paging-item"><a href="#" class="tm-paging-link">K API２</a></li>
+            </ul>
+        </nav>
     </div>
+
+    <!-- Gallery -->
+    <div class="row tm-gallery" id="gallery">
+        <!-- gallery page 1 -->
+        <div id="tm-gallery-page-pizza" class="tm-gallery-page"></div>
+        <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <figure>
+                <img src="" alt="Image" class="img-fluid tm-gallery-img" />
+                <figcaption>
+                    <h4 id="title"></h4>
+                    <p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut
+                        sit amet tellus accumsan</p>
+                    <p class="tm-gallery-price">$45 / $55</p>
+                </figcaption>
+            </figure>
+        </article>
+
+    </div> <!-- gallery page 1 -->
+
     <div class="tm-section tm-container-inner">
         <div class="row">
             <div class="col-md-6">
                 <figure class="tm-description-figure">
-                    <img src="img/img-01.jpg" alt="Image" class="img-fluid" />
+                    <img src="" alt="Image" class="img-fluid" />
                 </figure>
             </div>
             <div class="col-md-6">
@@ -94,7 +112,7 @@
             </div>
         </div>
     </div>
-        <footer class="tm-footer text-center">
+    <footer class="tm-footer text-center">
         <p>Copyright &copy; 2020 Simple House
 
             | Design: <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
@@ -104,34 +122,120 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- axiosライブラリの読み込み -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/parallax.min.js"></script>
     <script>
-        $(document).ready(function () {
-            // Handle click on paging links
-            $('.tm-paging-link').click(function (e) {
-                e.preventDefault();
+        // streetachademyURL
+        const url = "https://www.street-academy.com/api/v1/events?page=&since=&until=&category=1&prefecture=40&teacher=";
 
-                var page = $(this).text().toLowerCase();
-                $('.tm-gallery-page').addClass('hidden');
-                $('#tm-gallery-page-' + page).removeClass('hidden');
-                $('.tm-paging-link').removeClass('active');
-                $(this).addClass("active");
+        // ___________天気ページ___________
+        $(function () {
+            $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=Fukuoka-shi,JP&APPID=9e86060e71f310c07e0a7adb21fdeb2c", function (data) {
+                if (!data.cod || data.cod != 200) {
+                    return;
+                }
+
+                $("#desc").text(data.weather[0].description);
+                $("#temp").text(Math.floor(data.main.temp - 273.15));
+                $("#name").text(data.name);
+
+                var id = data.weather[0].id;
+                var unixTime = Math.floor((new Date()).getTime() / 1000);
+                if (data.sys.sunrise <= unixTime && unixTime <= data.sys.sunset) {
+                    $("#icon").addClass("wi-owm-day-" + id);
+                } else {
+                    $("#icon").addClass("wi-owm-night-" + id);
+                }
+
+                $("#weather1").show();
             });
         });
-        // イベント掲載ページ
-        const url = "https://www.street-academy.com/api/v1/events?page=4&since=&until=YYYY-MM-DD&category=&prefecture=40&teacher=";
-        axios.get(url)
 
+        // ___________5daysページ___________
+        //geolocation
+        function success(pos) {
+            ajaxRequest(pos.coords.latitude, pos.coords.longitude);
+        }
+
+        function fail(error) {
+            alert('位置情報の取得に失敗しました。エラーコード:' + error.code);
+        }
+
+        navigator.geolocation.getCurrentPosition(success, fail);
+
+        //UTCをミリ秒に
+        function utcToJSTime(utcTime) {
+            return utcTime * 1000;
+        }
+
+        //データ取得
+        function ajaxRequest(lat, long) {
+            const url = 'https://api.openweathermap.org/data/2.5/forecast';
+            const appId = '9e86060e71f310c07e0a7adb21fdeb2c';
+
+            $.ajax({
+                url: url,
+                data: {
+                    appid: appId,
+                    lat: lat,
+                    lon: long,
+                    units: 'metric',
+                    lang: 'ja'
+                }
+            })
+                .done(function (data) {
+
+                    //都市名、国名
+                    $('#place').text(data.city.name + ', ' + data.city.country);
+
+                    //天気予報データ
+                    data.list.forEach(function (forecast, index) {
+                        const dateTime = new Date(utcToJSTime(forecast.dt));
+                        const month = dateTime.getMonth() + 1;
+                        const date = dateTime.getDate();
+                        const hours = dateTime.getHours();
+                        const min = String(dateTime.getMinutes()).padStart(2, '0');
+                        const temperature = Math.round(forecast.main.temp);
+                        const description = forecast.weather[0].description;
+
+                        //現在の天気とそれ以外で出力を変える
+                        if (index === 0) {
+                            const currentWeather = `
+        <div class="info">
+          <p>
+            <span class="description">現在の天気:${description}</span>
+            <span class="temp">${temperature}</span>℃
+          </p>
+        </div>`;
+                            $('#weather').html(currentWeather);
+                        } else {
+                            const tableRow = `
+        <tr>
+          <td class="info">
+            ${month}/${date} ${hours}:${min}
+          </td>
+          <td><span class="description">${description}</span></td>
+          <td><span class="temp">${temperature}℃</span></td>
+        </tr>`;
+                            $('#forecast').append(tableRow);
+                        }
+                    })
+                })
+                .fail(function () {
+                    console.log('$ajax failed!');
+                })
+        }
+
+
+
+        // ___________イベント掲載ページ___________
+        axios.get(url)
             // thenで成功した場合の処理をかける
             .then(function (response) {
                 console.log(response.data.events);
                 const array = [];
                 response.data.events.forEach(function (x) {   // データが入ってたら繰り返し処理してデータを表示されてみる。
-                    array.push(`<a href="${x.url}"><h3>${x.title}</h3><img src="${x.image_url}"><p>${x.start_at}</p></a>`);
-                });     //波括弧の中に取得したデータを書いてあげないととってこれない
-
-                $('#tm-gallery-page-pizza').html(array);
+                    array.push(`<ul><li><a href="${x.url}"><h3>${x.title}</h3><img src="${x.image_url}"><p>${x.teacher}</p></a></li></ul>`);
+                })   //波括弧の中に取得したデータを書いてあげないととってこれない
+                $('#gallery').html(array);
             })
             // catchでエラー時の挙動を定義する
             .catch(function (err) {
@@ -139,7 +243,6 @@
             }).finally(function () {                // 成功失敗に関わらず必ず実行
                 console.log('done!');
             });
-
 
     </script>
 </body>
