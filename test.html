@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <link href="apikadai2.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Taiken</title>
+<link rel="stylesheet" type="text/css"
+    href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+<link rel="stylesheet" type="text/css"
+    href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/9-2-1/css/9-2-1.css">
+</head>
+
+<body>
+
+   
+</body>
+</html>
+
+function ajaxRequest(lat, long) {
+const url = 'https://api.openweathermap.org/data/2.5/forecast';
+const appId = '9e86060e71f310c07e0a7adb21fdeb2c';
+
+//天気予報データ
+data.list.forEach(function (forecast, index) {
+const dateTime = new Date(utcToJSTime(forecast.dt));
+const month = dateTime.getMonth() + 1;
+const date = dateTime.getDate();
+const hours = dateTime.getHours();
+const min = String(dateTime.getMinutes()).padStart(2, '0');
+const temperature = Math.round(forecast.main.temp);
+const description = forecast.weather[0].description;
+
+//現在の天気とそれ以外で出力を変える
+if (index === 0) {
+const currentWeather = `
+<div class="info">
+    <p>
+        <span class="description">現在の天気:${description}</span>
+        <span class="temp">${temperature}</span>℃
+    </p>
+</div>`;
+$('#weather').html(currentWeather);
+} else {
+const tableRow = `
+<tr>
+    <td class="info">
+        ${month}/${date} ${hours}:${min}
+    </td>
+    <td><span class="description">${description}</span></td>
+    <td><span class="temp">${temperature}℃</span></td>
+</tr>`;
+$('#forecast').append(tableRow);
+}
+})
+})
+.fail(function () {
+console.log('$ajax failed!');
+})
+}
