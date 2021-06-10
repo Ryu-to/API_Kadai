@@ -13,8 +13,6 @@
 
 <body>
     <header class="row tm-welcome-section">
-
-        <h2 class="col-12 text-center tm-section-title">Taiken</h2>
         <div class="container">
             <div id="parallax-window">
                 <h3 id="place"></h3>
@@ -169,7 +167,7 @@
                 const array = [];
                 
                 response.data.events.forEach(function (x) {   // データが入ってたら繰り返し処理してデータを表示されてみる。
-                    array.push(`<li id="event"><a href="${x.url}"><h3>${x.title}</h3><img src="${x.image_url}"><p>${x.teacher}</p></a></li>`);
+                    array.push(`<li id="event"><a href="${x.url}"><h3>${x.title}</h3><img id="eventPic"src="${x.image_url}"><p>${x.teacher}</p></a></li>`);
                 })   //波括弧の中に取得したデータを書いてあげないととってこれない
                 $('#gallery').html(array);
             })

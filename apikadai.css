@@ -107,14 +107,42 @@ ul#gallery{
   flex-wrap: wrap;
 }
 li#event {
-  width: 50%;
-  height: 100%;
+  background-color: snow;
+  width: 20%;
+  height: 40%;
   font-size: 12px;
+  margin: 15px 15px;
+  text-align:center;
+  border-radius: 10px;
+  color:#636363;
 }
+
+li#event h3{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight:bold;
+   color:#636363;
+}
+
 li#event p{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-decoration:none;
+}
+li#event h3:hover {
+  color: red;
+}
+
+li#event p:hover {
+  color: red;
+}
+
+#eventPic{
+width: 80%;
+height: 80%;
+
 }
 .container {
   width: 100%;
